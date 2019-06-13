@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>学生信息列表页</h1>
+    <table border="1" width="600">
+        <thead>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead> 
+
+        <tbody>
+            {{each list value}}
+            <tr>
+                <td>{{value.sid}}</td>
+                <td>{{value.sname}}</td>
+                <td>{{value.sage}}</td>
+                <td>{{value.sgender}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
