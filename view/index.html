@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>学生信息列表页</h1>
+    <a href="/add">添加学生</a>
     <table border="1" width="600">
         <thead>
             <tr>
@@ -15,6 +16,7 @@
                 <th>姓名</th>
                 <th>年龄</th>
                 <th>性别</th>
+                <th>操作</th>
             </tr>
         </thead> 
 
@@ -25,6 +27,10 @@
                 <td>{{value.sname}}</td>
                 <td>{{value.sage}}</td>
                 <td>{{value.sgender}}</td>
+                <td>
+                    <a href="/delstu?sid={{value.sid}}" onclick="return confirm('您确定要删除该数据吗?')">删除</a>
+                    <a href="/editstu?sid={{value.sid}}">编辑</a>
+                </td>
             </tr>
             {{/each}}
         </tbody>
